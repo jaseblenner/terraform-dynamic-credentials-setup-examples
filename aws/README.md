@@ -23,3 +23,8 @@ Congratulations! You now have a Terraform Cloud workspace where runs will automa
 
 # Multiple TFC workspaces/IAM roles interfacing with the same AWS account (and the same OIDC provider):
 
+
+1. A single OIDC identity provider has been provisioned in our AWS account `app.terraform.io` : ![Alt text](./docs/01.png)
+2. Multiple IAM roles have been provisioned in the AWS account `tfc-role` & `tfc-role-additional`, configured to leverage the same OIDC identity provider: ![Alt text](./docs/02.png)
+3. Each role has it's own discrete policy with differing permissions attached  ![Alt text](./docs/03.png) ![Alt text](./docs/04.png)
+4. Finally, we have created two TFC workspaces `my-aws-workspace` & `my-aws-workspace-additional` each configured to assume their own discrete role (`tfc-role` & `tfc-role-additional`): ![Alt text](./docs/05.png) ![Alt text](./docs/06.png)
