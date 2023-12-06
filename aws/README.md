@@ -19,3 +19,7 @@ Copy `terraform.tfvars.example` to `terraform.tfvars` and customize the required
 Run `terraform plan` to verify your setup, and then run `terraform apply`.
 
 Congratulations! You now have a Terraform Cloud workspace where runs will automatically authenticate to AWS when using the AWS Terraform provider.
+
+
+# Multiple TFC workspaces/IAM roles interfacing with the same AWS account (and the same OIDC provider):
+
